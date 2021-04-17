@@ -10,8 +10,8 @@
 backup_files="/home/$USER/Documents /home/$USER/Downloads /home/$USER/Pictures /home/$USER/Videos /var/spool/mail /etc /root /boot /opt"
 
 # Where to backup to.
-# This should be automatically mounted on startup, need to add that in
-dest="/media/truenas-share/"
+# This should be automatically mounted on startup, need to add that in.
+dest="/media/share/"
 
 # Setup variables for the archive filename.
 day=$(date +%A)
