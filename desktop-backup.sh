@@ -7,6 +7,7 @@
 ####################################
 
 # What to backup. 
+This doesn't work at the moment, need to specify the user.
 backup_files="/home/$USER/Documents /home/$USER/Downloads /home/$USER/Pictures /home/$USER/Videos /var/spool/mail /etc /root /boot /opt"
 
 # Where to backup to.
@@ -52,7 +53,9 @@ echo "Backing up $backup_files to $dest/$archive_file"
 date
 echo
 
+
 # Backup the files using pigz for parallel processing
+# TODO: Check if pigz is installed first
 # pigz czf $dest/$archive_file $backup_files
 # alternative
 tar --use-compress-program=pigz -cf $dest/$archive_file $backup_files
